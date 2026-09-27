@@ -2,7 +2,6 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import type { CmsConfig, CmsConfigContactLink } from '../lib/data';
 import IconLink from "./IconLink.astro";
-import Starfield from './space/Starfield.astro';
 
 interface Props {
 	config?: CmsConfig | null;
@@ -16,7 +15,6 @@ const contactLinks = (config?.contactLinks ?? []).filter(
 const today = new Date();
 ---
 <footer class="border-t bg-background py-12 text-center text-sm text-muted-foreground relative overflow-hidden">
-	{config?.footerStarfield !== false && <Starfield count={50} class="text-foreground/15" />}
 	<div class="relative flex flex-col items-center gap-6">
 		{contactLinks.length > 0 && (
 			<div class="flex justify-center gap-4">
@@ -33,6 +31,9 @@ const today = new Date();
 		<p>
 			&copy; {today.getFullYear()}
 			<span data-tina-field={seo ? tinaField(seo, "siteOwner") : undefined}>{seo?.siteOwner}</span>. All rights reserved.
+		</p>
+		<p class="max-w-2xl text-center text-xs text-muted-foreground">
+			Auburn Jr Lions is a 501(c)(3) nonprofit organization. Tax-exempt status and donation details are placeholders for official information to be added in TinaCMS.
 		</p>
 		<a
 			href="https://tina.io"

@@ -10,7 +10,6 @@ import type { QueryResult } from '@tinacms/astro/data';
 import type { BlogQuery, ConfigQuery, PageQuery } from '../../tina/__generated__/types';
 import type { CmsBlog, CmsConfig, CmsPage } from './data';
 import PageBody from '../components/islands/PageBody.astro';
-import BlogBody from '../components/islands/BlogBody.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getBlog, getConfig, getPage } from './data';
@@ -22,14 +21,6 @@ export const islands: IslandRegistry = {
 		wrapper: { tag: 'main' },
 		propsFromData: (data) => ({
 			data: (data as QueryResult<PageQuery>).data?.page as CmsPage | undefined,
-		}),
-	},
-	blog: {
-		fetch: (_request, params) => getBlog(params.get('slug') ?? ''),
-		component: BlogBody,
-		wrapper: { tag: 'article' },
-		propsFromData: (data) => ({
-			data: (data as QueryResult<BlogQuery>).data?.blog as CmsBlog | undefined,
 		}),
 	},
 	global: {

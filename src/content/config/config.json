@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "TinaCMS + Astro",
-    "description": "Welcome to my website!",
-    "siteOwner": "TinaCMS",
-    "logo": "/orange-llama.svg"
+    "title": "Auburn Jr Lions",
+    "description": "Youth football and cheer in Auburn, built on teamwork, discipline, and community.",
+    "siteOwner": "Auburn Jr Lions",
+    "logo": "/lions.svg"
   },
   "nav": [
     {
@@ -11,34 +11,37 @@
       "link": "/"
     },
     {
-      "title": "Blog",
-      "link": "/blog"
+      "title": "About Us",
+      "link": "/about"
     },
     {
-      "title": "About",
-      "link": "/about"
+      "title": "Football",
+      "link": "/football"
+    },
+    {
+      "title": "Cheer",
+      "link": "/cheer"
+    },
+    {
+      "title": "Support",
+      "link": "/support"
     }
   ],
   "contactLinks": [
     {
-      "title": "X",
-      "link": "https://x.com/tinacms",
-      "icon": "tabler:brand-x"
+      "title": "Email",
+      "link": "mailto:info@auburnjrlions.org",
+      "icon": "tabler:mail"
     },
     {
-      "title": "Docs",
-      "link": "https://tina.io/docs",
-      "icon": "tabler:book-2"
+      "title": "Facebook",
+      "link": "https://facebook.com",
+      "icon": "tabler:brand-facebook"
     },
     {
-      "title": "GitHub",
-      "link": "https://github.com/tinacms/tinacms",
-      "icon": "tabler:brand-github"
-    },
-    {
-      "title": "Discord",
-      "link": "https://tina.io/discord",
-      "icon": "tabler:brand-discord"
+      "title": "Instagram",
+      "link": "https://instagram.com",
+      "icon": "tabler:brand-instagram"
     }
   ]
 }

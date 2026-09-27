@@ -113,13 +113,7 @@ export const GlobalConfigCollection: Collection = {
           type: "string"
         }
       ],
-    },
-    {
-      name: "footerStarfield",
-      label: "Show starfield in footer",
-      type: "boolean",
     }
-
     // Add other config fields here...
   ]
 }

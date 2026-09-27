@@ -30,20 +30,8 @@ export async function listPages() {
 		.flatMap((edge) => (edge?.node ? [edge.node] : []));
 }
 
-export async function listBlogs() {
-	const result = await client.queries.blogConnection();
-	return (result.data.blogConnection.edges ?? [])
-		.flatMap((edge) => (edge?.node ? [edge.node] : []))
-		.sort((a, b) => {
-			const ad = a.pubDate ? new Date(a.pubDate).valueOf() : 0;
-			const bd = b.pubDate ? new Date(b.pubDate).valueOf() : 0;
-			return bd - ad;
-		});
-}
-
 export type CmsConfig = Awaited<ReturnType<typeof getConfig>>['data']['config'];
 export type CmsPage = Awaited<ReturnType<typeof getPage>>['data']['page'];
-export type CmsBlog = Awaited<ReturnType<typeof getBlog>>['data']['blog'];
 
 export type PageBlock = NonNullable<NonNullable<CmsPage['blocks']>[number]>;
 export type PageBlockTypename = PageBlock['__typename'];
